@@ -1,10 +1,13 @@
 import cogoToast from 'cogo-toast';
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { isEmpty } from '../../helper/Validation';
 import { Create } from '../../services/crudServices';
 import FullScreenLoader from '../Common/FullScreenLoader';
 
 const CreateForm = () => {
+  const navigate = useNavigate();
+
   let ProductName,
     ProductCode,
     ProductImage,
@@ -47,12 +50,7 @@ const CreateForm = () => {
         Loader.classList.add('d-none');
         if (result === true) {
           cogoToast.success('Data Save success');
-          ProductName.value = '';
-          ProductCode.value = '';
-          ProductImage.value = '';
-          UnitPrice.value = '';
-          Quantity.value = '';
-          TotalPrice.value = '';
+          navigate('/');
         } else {
           cogoToast.error('Data Save failed');
         }

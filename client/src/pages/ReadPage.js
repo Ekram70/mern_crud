@@ -6,6 +6,7 @@ const ReadPage = () => {
   return (
     <div>
       <AppNavbar />
+      <br />
       <ListTable />
     </div>
   );

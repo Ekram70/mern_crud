@@ -12,7 +12,7 @@ class App extends Component {
           <Routes>
             <Route exact path="/" element={<ReadPage />}></Route>
             <Route exact path="/create" element={<CreatePage />}></Route>
-            <Route exact path="/update" element={<UpdatePage />}></Route>
+            <Route exact path="/update/:id" element={<UpdatePage />}></Route>
           </Routes>
         </BrowserRouter>
       </Fragment>
