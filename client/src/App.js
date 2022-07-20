@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import CreatePage from './pages/CreatePage';
+import ReadPage from './pages/ReadPage';
+import UpdatePage from './pages/UpdatePage';
 
 class App extends Component {
   render() {
@@ -8,7 +10,9 @@ class App extends Component {
       <Fragment>
         <BrowserRouter>
           <Routes>
-            <Route exact path="/" element={<HomePage />}></Route>
+            <Route exact path="/" element={<ReadPage />}></Route>
+            <Route exact path="/create" element={<CreatePage />}></Route>
+            <Route exact path="/update" element={<UpdatePage />}></Route>
           </Routes>
         </BrowserRouter>
       </Fragment>
