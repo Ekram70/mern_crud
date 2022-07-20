@@ -25,6 +25,20 @@ exports.ReadProduct = (req, res) => {
   });
 };
 
+// read
+exports.ReadProductById = (req, res) => {
+  let id = req.params.id;
+  let Query = { _id: id };
+  let Projection = {};
+  ProductsModel.find(Query, Projection, (error, data) => {
+    if (!error) {
+      res.status(200).json({ status: 'Success', data: data });
+    } else {
+      res.status(400).json({ status: 'Fail', data: error });
+    }
+  });
+};
+
 // update
 exports.UpdateProduct = (req, res) => {
   let id = req.params.id;

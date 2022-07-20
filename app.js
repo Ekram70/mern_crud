@@ -36,7 +36,7 @@ const limiter = rateLimit({
 
 // Database Connection
 const URI =
-  'mongodb+srv://username:password@test.f3g6t.mongodb.net/?retryWrites=true&w=majority';
+  'mongodb+srv://test_user:Test70User@test.f3g6t.mongodb.net/?retryWrites=true&w=majority';
 const option = { user: 'test_user', pass: 'Test70User', autoIndex: true };
 mongoose.connect(URI, option, function (error) {
   if (!error) {
